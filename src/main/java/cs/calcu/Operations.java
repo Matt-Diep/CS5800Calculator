@@ -26,4 +26,25 @@ public class Operations {
 		return i%j;
 	}
 
+	public double compute(Equation equation) {
+		if(equation.getOprand() == "+") {
+			return add(equation.getFirst(), equation.getSecond());
+		}
+		else if(equation.getOprand() == "-") {
+			return subtract(equation.getFirst(), equation.getSecond());
+		}
+		else if(equation.getOprand() == "*") {
+			return multiply(equation.getFirst(), equation.getSecond());
+		}
+		else if(equation.getOprand() == "/") {
+			return divide(equation.getFirst(), equation.getSecond());
+		}
+		else if(equation.getOprand() == "%") {
+			return mod(equation.getFirst(), equation.getSecond());
+		}
+		else
+			System.out.println("invalid oprand");
+			return 0;
+	}
+
 }

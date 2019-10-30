@@ -114,4 +114,58 @@ public class MainTest {
 		assertTrue("mod logic fail", answer == 0);
 	}
 	
+	@Test
+	public void checkOperatorAdd() {
+		Operations operator = new Operations();
+		Equation testEquation = new Equation();
+		testEquation.setFirst(10);
+		testEquation.setOprand("+");
+		testEquation.setSecond(5);
+		double answer = operator.compute(testEquation);
+		assertTrue("add and operator fail", answer == 15);
+	}
+	
+	@Test
+	public void checkOperatorSub() {
+		Operations operator = new Operations();
+		Equation testEquation = new Equation();
+		testEquation.setFirst(10);
+		testEquation.setOprand("-");
+		testEquation.setSecond(5);
+		double answer = operator.compute(testEquation);
+		assertTrue("sub and operator fail", answer == 5);
+	}
+	
+	@Test
+	public void checkOperatorMul() {
+		Operations operator = new Operations();
+		Equation testEquation = new Equation();
+		testEquation.setFirst(10);
+		testEquation.setOprand("*");
+		testEquation.setSecond(5);
+		double answer = operator.compute(testEquation);
+		assertTrue("mul and operator fail", answer == 50);
+	}
+	
+	@Test
+	public void checkOperatorDiv() {
+		Operations operator = new Operations();
+		Equation testEquation = new Equation();
+		testEquation.setFirst(10);
+		testEquation.setOprand("/");
+		testEquation.setSecond(5);
+		double answer = operator.compute(testEquation);
+		assertTrue("Div and operator fail", answer == 2);
+	}
+	
+	@Test
+	public void checkOperatorMod() {
+		Operations operator = new Operations();
+		Equation testEquation = new Equation();
+		testEquation.setFirst(10);
+		testEquation.setOprand("%");
+		testEquation.setSecond(5);
+		double answer = operator.compute(testEquation);
+		assertTrue("Mod and operator fail", answer == 0);
+	}
 }

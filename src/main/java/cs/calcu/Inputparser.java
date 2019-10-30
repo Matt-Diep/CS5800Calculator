@@ -1,7 +1,18 @@
 package cs.calcu;
 
+import java.util.Scanner;
+
 public class Inputparser {
 
+	public String getUserInput() {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Equation in 'x + y' format (with whitespace)");
+		System.out.println("Enter 'x' to stop");
+		String inputString = input.nextLine();
+		input.close();
+		return inputString;
+	}
+	
 	public boolean checkInput(String string) {
 		if(string == "x")
 			return false;
