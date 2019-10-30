@@ -5,6 +5,10 @@ public class Inputparser {
 	public boolean checkInput(String string) {
 		if(string == "x")
 			return false;
+		else if(countWhitespace(string) != 2) {
+			System.out.println("wrong format");
+			return false;
+		}
 		else
 			return true;
 	}

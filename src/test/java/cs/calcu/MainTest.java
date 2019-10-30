@@ -16,6 +16,13 @@ public class MainTest {
 	}
 	
 	@Test
+	public void checkWrongFormat() {
+		Inputparser parser = new Inputparser();
+		boolean result = parser.checkInput("10 +5");
+		assertFalse(result);
+	}
+	
+	@Test
 	public void checkDiscontinue() {
 		Inputparser parser = new Inputparser();
 		boolean result = parser.checkInput("x");
