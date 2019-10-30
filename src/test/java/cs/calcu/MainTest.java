@@ -57,5 +57,19 @@ public class MainTest {
 		equation = parser.seperateInput("10 + 5");
 		assertTrue("Second Not Equal", equation.getSecond() - testEquation.getSecond() == 0);
 	}
+	
+	@Test
+	public void checkAdd() {
+		Operations add = new Operations();
+		double answer = add.add(10, 5);
+		assertTrue("add logic fail", answer == 15);
+	}
+	
+	@Test
+	public void checkSubtract() {
+		Operations sub = new Operations();
+		double answer = sub.subtract(10, 5);
+		assertTrue("subtract logic fail", answer == 5);
+	}
 
 }
