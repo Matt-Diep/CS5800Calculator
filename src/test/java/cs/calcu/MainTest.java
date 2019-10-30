@@ -9,17 +9,24 @@ import org.junit.Test;
 public class MainTest {
 
 	@Test
-	public void checkValidInput() {
+	public void checkContinue() {
 		Inputparser parser = new Inputparser();
 		boolean result = parser.checkInput("10 + 5");
 		assertTrue(result);
 	}
 	
 	@Test
-	public void checkInvalidinput() {
+	public void checkDiscontinue() {
 		Inputparser parser = new Inputparser();
-		boolean result = parser.checkInput("10+5");
+		boolean result = parser.checkInput("x");
 		assertFalse(result);
+	}
+	
+	@Test
+	public void checkCountWhiteSpace() {
+		Inputparser parser = new Inputparser();
+		int amount = parser.countWhitespace("10 + 5");
+		assertTrue("countWhiteSpace wrong", amount - 2 == 0);
 	}
 	
 	@Test
