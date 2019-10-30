@@ -71,5 +71,33 @@ public class MainTest {
 		double answer = sub.subtract(10, 5);
 		assertTrue("subtract logic fail", answer == 5);
 	}
-
+	
+	@Test
+	public void checkMultiply() {
+		Operations multi = new Operations();
+		double answer = multi.multiply(10,5);
+		assertTrue("multiply logic fail", answer == 50);
+	}
+	
+	@Test
+	public void checkDivide() {
+		Operations divide = new Operations();
+		double answer = divide.divide(10, 5);
+		assertTrue("divide logic fail", answer == 2);
+	}
+	
+	@Test
+	public void checkDivideZero() {
+		Operations divide = new Operations();
+		double answer = divide.divide(10, 0);
+		assertTrue("divide logic fail", answer == 0);
+	}
+	
+	@Test
+	public void checkMod() {
+		Operations mod = new Operations();
+		double answer = mod.mod(10,5);
+		assertTrue("mod logic fail", answer == 0);
+	}
+	
 }
